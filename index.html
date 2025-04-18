@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(90deg, #1f6feb, #58a6ff);
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.5rem;
+    }
+
+    .project-card {
+      background: #161b22;
+      padding: 1.5rem;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03) rotateX(5deg);
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #21262d;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+      border: 1px solid #30363d;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #21262d;
+      color: #fff;
+    }
+
+    .contact-form button {
+      padding: 0.75rem 2rem;
+      background: #238636;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #161b22;
+      color: #8b949e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Future-Ready Developer</h1>
+    <p>Python | AWS | Data Science | Automation</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate fresher Software Developer skilled in Python, SQL, AWS, and Data Science. I build automation tools using Make, Automa, and Google APIs. My projects range from cloud architecture design to no-code cybersecurity platforms.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Call Center Logger & Analyzer</h3>
+      <p>Python, Pandas, SQLite - Data pipeline for cleaning, analyzing, and storing call records.</p>
+    </div>
+    <div class="project-card">
+      <h3>AWS High Availability Architecture</h3>
+      <p>EC2, RDS, S3, Auto Scaling - Designed cloud infrastructure for scalability and security.</p>
+    </div>
+    <div class="project-card">
+      <h3>CyberShield - No-Code Security Platform</h3>
+      <p>Make, Automa, Google Sheets - Automated security issue handler dashboard.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span><span>SQL</span><span>AWS</span><span>Linux</span><span>Make</span><span>Automa</span><span>Google APIs</span>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="YOUR_RESUME_LINK_HERE.pdf" target="_blank" style="color: #58a6ff;">Download My Resume</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name. Built with love & deployed on GitHub Pages.
+  </footer>
+</body>
+</html>
