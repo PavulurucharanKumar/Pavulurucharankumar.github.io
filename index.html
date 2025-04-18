@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -17,6 +19,12 @@
       background: #0d1117;
       color: #c9d1d9;
       scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .light-mode {
+      background: #f0f0f0;
+      color: #111;
     }
 
     header {
@@ -33,6 +41,19 @@
 
     header p {
       font-size: 1.2rem;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background: #30363d;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
     }
 
     section {
@@ -96,9 +117,21 @@
       background: #161b22;
       color: #8b949e;
     }
+
+    #vanta-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
   </style>
 </head>
 <body>
+  <div id="vanta-bg"></div>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Theme</button>
+
   <header>
     <h1>Future-Ready Developer</h1>
     <p>Python | AWS | Data Science | Automation</p>
@@ -152,5 +185,23 @@
   <footer>
     &copy; 2025 Your Name. Built with love & deployed on GitHub Pages.
   </footer>
+
+  <script>
+    VANTA.WAVES({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x1f6feb,
+      shininess: 50
+    });
+
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
 </body>
 </html>
